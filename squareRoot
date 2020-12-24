@@ -1,0 +1,14 @@
+n = int(input())
+root = int(input())
+l = 0
+
+def root_using_binary(l,r,root):
+  while r-l> 10**-5 :
+    mid = (l+r)/2
+    print(mid)
+    if mid**root < n:
+      l=mid
+    elif mid**root > n:
+      r = mid
+  return mid
+print(root_using_binary(l,r,root))
